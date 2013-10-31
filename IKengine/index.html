@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>IKengine</title>
+	<script src="draw.js"></script>
+    <style>
+        canvas {display:inline-block;}
+        #trace {display:inline-block;vertical-align:top;}
+    </style>
+</head>
+<body>
+<canvas id="cv1" width="1000" height="700" style="background-color:#000000;"></canvas>
+
+<div id="trace" style="border:1px solid black"></div>
+
+
+<script>
+    trace("start");
+    var context = document.getElementById("cv1").getContext("2d"); 
+    draw_grid(context, 1000,700,100,"#ffffff");
+    draw_something(context);
+    var sine = generate_sine_array(13)
+    draw_array_points(context, sine, 400);
+</script>
+</body>
+</html>
